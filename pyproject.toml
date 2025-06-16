@@ -1,9 +1,9 @@
 [project]
-name = "metric3d"
-version = "0.1.0"
+name = "mono"
+dynamic = ["version"]
 description = "Metric3D package"
 readme = "README.md"
-requires-python = "==3.12"
+requires-python = ">=3.12,<3.13"
 dependencies = [
   "datetime>=5.5",
   "html4vision>=0.5.0",
@@ -39,6 +39,9 @@ explicit = true
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "mono/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["mono"]
